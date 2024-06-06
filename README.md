@@ -1,1 +1,1 @@
-# AI-based-fashion
+# Big data projects
