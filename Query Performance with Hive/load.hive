@@ -1,0 +1,1 @@
+load data local inpath '${path}/hire_data/*.csv' into table ${name};

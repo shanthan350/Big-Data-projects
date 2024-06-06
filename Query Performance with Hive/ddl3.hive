@@ -1,0 +1,13 @@
+drop table if exists ${hivevar:name};
+create table ${hivevar:name}(
+        country string,
+        city string,
+        job_name string,
+        salary int)
+CLUSTERED BY (city) INTO 16 BUCKETS
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+  'separatorChar' = ',',
+  'quoteChar'     = '"',
+  'escapeChar'    = '\\'
+);
